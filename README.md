@@ -6,7 +6,7 @@ an array. Because of the large size of this array, you should implement a
 fast divide-and-conquer algorithm.
 
 ```
-[1,3,2] -> 1 inversion, arr[1] > arr[2]
+[1,3,2] -> This has 1 inversion, as arr[1] > arr[2].
 ```
 
 Largest number of inversions in an n-element array:
@@ -28,19 +28,16 @@ else
 return a + b + c;
 ```
 
-Example:
-
 To have step 3 **merge_count_split_inv** run in O(n), we can use step 3 from
 merge sort, which uncovers split inversions as it merges.
 To use step 3 from merge sort, however, we'll need our input arrays to
 merge_count_split_inv to be sorted.
 
-**merge_count_split_inv**
-In merging elements to a sorted result, split inversions will always originate
-from the 2nd array *b*, as it contains numbers that came "afterwards in the
-array" relative to numbers in *a*.
+**merge_count_split_inv: **
 
-So when an element of the second array *b* gets copied to output *c*, increment a
+In merging elements to a sorted result, split inversions will always originate
+from the second array *b*, as it contains numbers that came "afterwards in the
+array" relative to numbers in *a*. So when an element of the second array *b* gets copied to output *c*, increment a
 count by the number of elements remaining in the first array *a*.
 
 ## Motivation
