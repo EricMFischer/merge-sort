@@ -33,7 +33,7 @@ merge sort, which uncovers split inversions as it merges.
 To use step 3 from merge sort, however, we'll need our input arrays to
 merge_count_split_inv to be sorted.
 
-**merge_count_split_inv: **
+**merge_count_split_inv:**
 
 In merging elements to a sorted result, split inversions will always originate
 from the second array *b*, as it contains numbers that came "afterwards in the
